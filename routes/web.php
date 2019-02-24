@@ -15,10 +15,24 @@ Route::get('/', function () {
     return view('master');
 });
 
+/*
+* Rutas para Jugadores
+*/
 Route::resource('player','PLAYERController');
 Route::get('player/info/{id?}', 'PLAYERController@info');
 Route::get('player/info/{id?}/{name?}', 'PLAYERController@info');
 
+/*
+* Rutas para Monedas
+*/
+Route::resource('moneda','MONEDAController');
+Route::get('moneda/info/{id?}', 'MONEDAController@info');
+
+/*
+* Rutas para Juegos
+*/
+Route::resource('juego','JUEGOController');
+Route::get('juego/info/{id?}', 'JUEGOController@info');
 
 Auth::routes();
 

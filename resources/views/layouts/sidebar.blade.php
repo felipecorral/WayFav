@@ -16,30 +16,28 @@
 <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
+
             <div class="sidebar-header">
                 <h3>Bootstrap Sidebar</h3>
             </div>
     
             <ul class="list-unstyled components">
                 <p>Dummy Heading</p>
+                
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">General</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
+                        <li  class="{{ activeMenu('/juego') }}"><a href="/juego">Juegos</a></li>
+                        <li  class="{{ activeMenu('/moneda') }}"><a href="/moneda">Monedas</a></li>
+                        <li  class="{{ activeMenu('/player') }}"><a href="/player">Jugadores</a></li>
                     </ul>
                 </li>
+                <li  class="{{ activeMenu('/moneda') }}"><a href="/moneda">Monedas</a></li>
+                <li  class="{{ activeMenu('/player') }}"><a href="/player">Jugadores</a></li>
                 <li>
                     <a href="#">About</a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
@@ -52,10 +50,8 @@
                             <a href="#">Page 3</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
+                </li>-->
+
                 <li>
                     <a href="#">Contact</a>
                 </li>
