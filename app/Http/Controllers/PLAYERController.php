@@ -78,12 +78,9 @@ class PLAYERController extends Controller
             $player->name = $name;
             $player->save();
         }elseif($name != ''){
-            //if ($player->name == ''){
             $player->name = $name;
             $player->save();
         }
-        //$player= Player::where('device_id', $id);    
-        //return view('player.view',compact('player'));
         return $player; 
     }
 

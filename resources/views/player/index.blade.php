@@ -34,7 +34,7 @@
                 <button class="btn btn-danger" type="submit">Eliminar</button>
             </form>
         </td>
-        <td><a href="{{action('PLAYERController@info', $player['device_id'])}}" class="btn btn-warning">Mostrar</a></td>
+        <td><a href="{{action('PLAYERController@info', $player['device_id'])}}" class="btn btn-info">Mostrar</a></td>
       </tr>
       @endforeach
     </tbody>
