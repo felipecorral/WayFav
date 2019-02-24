@@ -26,6 +26,7 @@ Route::get('player/info/{id?}/{name?}', 'PLAYERController@info');
 * Rutas para Monedas
 */
 Route::resource('moneda','MONEDAController');
+Route::get('moneda/juego/{id?}', 'MONEDAController@game');
 Route::get('moneda/info/{id?}', 'MONEDAController@info');
 
 /*

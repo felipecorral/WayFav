@@ -18,15 +18,16 @@
         <nav id="sidebar">
 
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>Menú WayFav</h3>
             </div>
     
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+                <p>Beta</p>
                 
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">General</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <!--<ul class="collapse list-unstyled" id="homeSubmenu">-->
+                    <ul class=" list-unstyled" id="homeSubmenu">
                         <li  class="{{ activeMenu('/juego') }}"><a href="/juego">Juegos</a></li>
                         <li  class="{{ activeMenu('/moneda') }}"><a href="/moneda">Monedas</a></li>
                         <li  class="{{ activeMenu('/player') }}"><a href="/player">Jugadores</a></li>
