@@ -71,12 +71,15 @@ class PLAYERController extends Controller
         //if ($player->exist());
         $player = Player::firstOrCreate(['device_id' => $id]);
         //$player = Player::firstOrNew(['device_id' => $id]);
-        if ($name != ''){
+        if ($player->name == ''){
+            if(empty($name)){
+                $name = 'player-' . $id;
+            }
             $player->name = $name;
             $player->save();
-        }else{
-        //if ($player->name == ''){
-            $player->name = 'player-' . $id;
+        }elseif($name != ''){
+            //if ($player->name == ''){
+            $player->name = $name;
             $player->save();
         }
         //$player= Player::where('device_id', $id);    
