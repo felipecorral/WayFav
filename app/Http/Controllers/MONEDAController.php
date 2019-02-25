@@ -25,7 +25,7 @@ class MONEDAController extends Controller
     {
         //
         $juego = Juego::find($id);
-        $monedas = $juego->monedas();
+        $monedas = $juego->monedas;
         
         return view('moneda.index', compact('monedas'));
     }
