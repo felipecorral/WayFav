@@ -16,7 +16,9 @@
 <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
-
+            <?php function activeMenu2($url){
+                return request()->is($url) ? 'active': '';
+                } ?>
             <div class="sidebar-header">
                 <h3>Menú WayFav</h3>
             </div>
@@ -27,14 +29,17 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">General</a>
                     <!--<ul class="collapse list-unstyled" id="homeSubmenu">-->
+                    <!--TODO: Arreglar activeMenu-->        
+                    <!--WARN: No subir activeMenu a PRO-->
+
                     <ul class=" list-unstyled" id="homeSubmenu">
-                        <li  class="{{ activeMenu('/juego') }}"><a href="/juego">Juegos</a></li>
-                        <li  class="{{ activeMenu('/moneda') }}"><a href="/moneda">Monedas</a></li>
-                        <li  class="{{ activeMenu('/player') }}"><a href="/player">Jugadores</a></li>
+                        <li  class="{{ activeMenu2('/juego') }}"><a href="/juego">Juegos</a></li>
+                        <li  class="{{ activeMenu2('/moneda') }}"><a href="/moneda">Monedas</a></li>
+                        <li  class="{{ activeMenu2('/player') }}"><a href="/player">Jugadores</a></li>
                     </ul>
                 </li>
-                <li  class="{{ activeMenu('/moneda') }}"><a href="/moneda">Monedas</a></li>
-                <li  class="{{ activeMenu('/player') }}"><a href="/player">Jugadores</a></li>
+                <li  class="{{ activeMenu2('/moneda') }}"><a href="/moneda">Monedas</a></li>
+                <li  class="{{ activeMenu2('/player') }}"><a href="/player">Jugadores</a></li>
                 <li>
                     <a href="#">About</a>
                 </li>
