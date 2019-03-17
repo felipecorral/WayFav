@@ -39,7 +39,7 @@
         @if(Auth::guest())
         <div class="container">
             <div class="col-sm-10">
-                <p><h1>No tienes permisos para ver esta página</h1></p>
+                <p><h1>Lo siento, no tienes permisos para ver esta página</h1></p>
                 <p><h3>Un saludo</h3></p>
             </div>
         </div>
